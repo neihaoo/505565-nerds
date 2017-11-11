@@ -21,21 +21,75 @@
   </header>
   <main class="container">
     <h1>Магазин готовых шаблонов</h1>
-    <section class="filters">
+    <section class="filter">
       <h2 class="visually-hidden">Фильтр работ</h2>
-      <!-- Здесь будет форма -->
+      <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset>
+          <legend class="filter-title">Стоимость:</legend>
+          <div class="filter-price">
+            <div class="filter-price-range"></div>
+            <span class="filter-price-button" tabindex="0"></span>
+            <span class="filter-price-button" tabindex="0"></span>
+          </div>
+          <label>От <input class="filter-price-output" type="text" name="price-min" value="0"></label>
+          <label>До <input class="filter-price-output" type="text" name="price-max" value="15000"></label>
+        </fieldset>
+        <fieldset>
+          <legend class="filter-title">Сетка:</legend>
+          <ul>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
+              <label for="filter-adaptive">Адаптивная</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="fixed" id="filter-fixed">
+              <label for="filter-fixed">Фиксированная</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="rubber" id="filter-rubber">
+              <label for="filter-rubber">Резиновая</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend class="filter-title">Особенности:</legend>
+          <ul>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-slider" checked>
+              <label for="filter-slider">Слайдер</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="features" id="filter-features">
+              <label for="filter-features">Блок преимуществ</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news" id="filter-news" checked>
+              <label for="filter-news">Новости</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="gallery" id="filter-gallery">
+              <label for="filter-gallery">Галерея</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="trash" id="filter-trash">
+              <label for="filter-trash">Корзина</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button filter-button" type="submit">Показать</button>
+      </form>
     </section>
     <section class="catalog">
       <h2 class="visually-hidden">Список работ</h2>
-      <div class="catalog-filters">
+      <div class="catalog-filter">
         <p>Сортировать:</p>
         <ul>
-          <li><a class="catalog-filters-current" href="#">По цене</a></li>
+          <li><a class="catalog-filter-current" href="#">По цене</a></li>
           <li><a href="#">По типу</a></li>
           <li><a href="#">По названию</a></li>
         </ul>
-        <span class="catalog-filters-asc catalog-filters-current"></span>
-        <span class="catalog-filters-desc"></span>
+        <button class="catalog-filter-asc catalog-filter-current">Вниз</button>
+        <button class="catalog-filter-desc">Вверх</button>
       </div>
       <ul class="catalog-list">
         <li>
@@ -87,10 +141,12 @@
           </section>
         </li>
       </ul>
-      <a class="button catalog-button catalog-button-current" href="#">1</a>
-      <a class="button catalog-button" href="#">2</a>
-      <a class="button catalog-button" href="#">3</a>
-      <a class="button catalog-button" href="#">Следующая</a>
+      <p class="paginator">
+        <a class="button catalog-button catalog-button-current" href="#">1</a>
+        <a class="button catalog-button" href="#">2</a>
+        <a class="button catalog-button" href="#">3</a>
+        <a class="button catalog-button" href="#">Следующая</a>
+      </p>
     </section>
   </main>
   <footer class="main-footer">
@@ -116,8 +172,22 @@
   </footer>
   <section class="modal">
     <h2>Напишите нам</h2>
-    <!-- Здесь будет форма -->
-    <span class="modal-close">x</span>
+    <form class="modal-contacts-form" action="https://echo.htmlacademy.ru" method="post">
+      <p class="contacts-form-item">
+        <label for="name">Ваше имя:</label>
+        <input id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+      </p>
+      <p class="contacts-form-item">
+        <label for="email">Ваш e-mail:</label>
+        <input id="email" type="text" name="email" placeholder="Для отправки ответа">
+      </p>
+      <p class="contacts-form-item">
+        <label for="text">Текст письма:</label>
+        <textarea id="text" name="text" placeholder="В свободной форме"></textarea>
+      </p>
+      <button class="button form-button" type="submit">Отправить</button>
+    </form>
+   <button class="modal-close" type="button">Закрыть</button>
   </section>
 </body>
 </html>

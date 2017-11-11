@@ -23,8 +23,13 @@
     <h1 class="visually-hidden">Дизайн-студия «Нёрдс»</h1>
     <section class="slider">
       <h2 class="visually-hidden">Наши преимущества</h2>
+      <p class="paginator">
+        <a class="slider-control slider-control-current" href="#slider-1">1</a>
+        <a class="slider-control" href="#slider-2">2</a>
+        <a class="slider-control" href="#slider-3">3</a>
+      </p>
       <ul>
-        <li class="slider-item">
+        <li class="slider-item" id="slider-1">
           <p>
             <img class="slider-photo" src="img/nerds-index-slide1.png" width="760" height="431" alt="Фото смартфона">
           </p>
@@ -32,7 +37,7 @@
           <p>Математически выверенный дизайн для вашего сайта или мобильно приложения</p>
           <a class="button slider-button" href="#">Узнать больше</a>
         </li>
-        <li class="slider-item">
+        <li class="slider-item" id="slider-2">
           <p>
             <img class="slider-photo" src="img/nerds-index-slide2.png" width="760" height="431" alt="Фото компьютера">
           </p>
@@ -40,7 +45,7 @@
           <p>Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
           <a class="button slider-button" href="#">Узнать больше</a>
         </li>
-        <li class="slider-item">
+        <li class="slider-item" id="slider-3">
           <p>
             <img class="slider-photo" src="img/nerds-index-slide3.png" width="760" height="431" alt="Фото планшета">
           </p>
@@ -49,9 +54,6 @@
           <a class="button slider-button" href="#">Узнать больше</a>
         </li>
       </ul>
-      <span class="slider-control slider-control-current"></span>
-      <span class="slider-control"></span>
-      <span class="slider-control"></span>
     </section>
     <section class="features">
       <h2 class="visually-hidden">Наши услуги</h2>
@@ -136,21 +138,35 @@
           ул. Б. Конюшенная, д. 19/8
         </p>
         <p>тел. +7 (812) 275-75-75</p>
-        <a href="#" class="button contacts-button">Напишите нам</a>
+        <a class="button contacts-button" href="#">Напишите нам</a>
       </div>
     </section>
-      <ul class="social">
-        <li><a class="social-button" href="#">Вконтакте</a></li>
-        <li><a class="social-button" href="#">Фейсбук</a></li>
-        <li><a class="social-button" href="#">Инстаграм</a></li>
-      </ul>
-      <b class="footer-slogan">Давайте дружить, это выгодно!</b>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+    <ul class="social">
+      <li><a class="social-button" href="#">Вконтакте</a></li>
+      <li><a class="social-button" href="#">Фейсбук</a></li>
+      <li><a class="social-button" href="#">Инстаграм</a></li>
+    </ul>
+    <b class="footer-slogan">Давайте дружить, это выгодно!</b>
+    <p>Скидка 10% для друзей из социальных сетей.</p>
   </footer>
   <section class="modal">
     <h2>Напишите нам</h2>
-    <!-- Здесь будет форма -->
-    <span class="modal-close">x</span>
+    <form class="modal-contacts-form" action="https://echo.htmlacademy.ru" method="post">
+      <p class="contacts-form-item">
+        <label for="name">Ваше имя:</label>
+        <input id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+      </p>
+      <p class="contacts-form-item">
+        <label for="email">Ваш e-mail:</label>
+        <input id="email" type="text" name="email" placeholder="Для отправки ответа">
+      </p>
+      <p class="contacts-form-item">
+        <label for="text">Текст письма:</label>
+        <textarea id="text" name="text" placeholder="В свободной форме"></textarea>
+      </p>
+      <button class="button form-button" type="submit">Отправить</button>
+    </form>
+   <button class="modal-close" type="button">Закрыть</button>
   </section>
 </body>
 </html>
