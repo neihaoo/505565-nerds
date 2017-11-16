@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Дизайн-студия Нёрдс: Главная</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
@@ -23,7 +26,7 @@
     <h1 class="visually-hidden">Дизайн-студия «Нёрдс»</h1>
     <section class="slider">
       <h2 class="visually-hidden">Наши преимущества</h2>
-      <ul>
+      <ul class="slider-list">
         <li class="slider-item">
           <p>
             <img class="slider-photo" src="img/nerds-index-slide1.png" width="760" height="431" alt="Фото смартфона">
@@ -32,7 +35,7 @@
           <p>Математически выверенный дизайн для вашего сайта или мобильно приложения</p>
           <a class="button slider-button" href="#">Узнать больше</a>
         </li>
-        <li class="slider-item">
+        <li>
           <p>
             <img class="slider-photo" src="img/nerds-index-slide2.png" width="760" height="431" alt="Фото компьютера">
           </p>
@@ -49,26 +52,29 @@
           <a class="button slider-button" href="#">Узнать больше</a>
         </li>
       </ul>
-      <p class="paginator">
-        <a class="slider-control slider-control-current" href="#">1</a>
-        <a class="slider-control" href="#">2</a>
-        <a class="slider-control" href="#">3</a>
-      </p>
+      <div class="paginator">
+        <button class="visually-hidden slider-control slider-control-current">Преимущество 1</button>
+        <button class="visually-hidden slider-control">Преимущество 2</button>
+        <button class="visually-hidden slider-control">Преимущество 3</button>
+      </div>
     </section>
     <section class="features">
       <h2 class="visually-hidden">Наши услуги</h2>
       <ul>
         <li class="features-item">
+          <img src="img/illustration-1.jpg" width="300" height="146" alt="Фото ноутбука">
           <h3>Веб-сайты</h3>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
           <a class="button features-button" href="#">Заказать</a>
         </li>
         <li class="features-item">
+          <img src="img/illustration-2.jpg" width="300" height="146" alt="Фото двух смартфонов">
           <h3>Приложения</h3>
           <p>Покорите ТОП-10 приложений в AppStore и Google Play</p>
           <a class="button features-button" href="#">Заказать</a>
         </li>
         <li class="features-item">
+          <img src="img/illustration-3.jpg" width="300" height="146" alt="Фото доски для презентаций">
           <h3>Презентации</h3>
           <p>Вы даже не подозреваете, насколько вы изумительны!</p>
           <a class="button features-button" href="#">Заказать</a>
@@ -79,7 +85,7 @@
       <h2 class="visually-hidden">О нас</h2>
       <b class="about-slogan">Мы - маленькая, но гордая дизайн-студия из Краснодара</b>
       <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-      <span class="about-text-bold">Выполняем заказы на разработку:</span>
+      <p class="about-text-bold">Выполняем заказы на разработку:</p>
       <ul>
         <li>Веб-сайтов любой сложности</li>
         <li>Мобильных приложений для iOS и Android</li>
@@ -88,7 +94,7 @@
       <p class="about-logo">
         <img src="img/nerds-illustration.jpg" width="360" height="208" alt="Логотип дизайн-студии «Нёрдс»">
       </p>
-      <span class="about-text-bold">С 2004 года любим точность во всем:</span>
+      <p class="about-text-bold">С 2004 года любим точность во всем:</p>
       <table class="about-table">
         <tr>
           <th>146<sup>%</sup></th>
@@ -107,22 +113,22 @@
       <ul>
         <li class="partners-item">
           <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/logo-1.png" width="260" height="180" alt="Логотип HTML Academy">
+            <img src="img/logo-1.png" width="199" height="68" alt="Логотип HTML Academy">
           </a>
         </li>
         <li class="partners-item">
           <a href="#">
-            <img src="img/logo-2.png" width="260" height="180" alt="Логотип барбершопа «Бородинский»">
+            <img src="img/logo-2.png" width="209" height="90" alt="Логотип барбершопа «Бородинский»">
           </a>
         </li>
         <li class="partners-item">
           <a href="#">
-            <img src="img/logo-3.png" width="260" height="180" alt="Логотип Pink">
+            <img src="img/logo-3.png" width="185" height="52" alt="Логотип Pink">
           </a>
         </li>
         <li class="partners-item">
           <a href="#">
-            <img src="img/logo-4.png" width="260" height="180" alt="Логотип интернет-магазина Mishka">
+            <img src="img/logo-4.png" width="173" height="84" alt="Логотип интернет-магазина Mishka">
           </a>
         </li>
       </ul>
@@ -131,6 +137,7 @@
   <footer class="main-footer">
     <section class="contacts">
       <h2 class="visually-hidden">Наши контакты</h2>
+      <img class="map" src="img/map.jpg" width="1440" height="416" alt="Наш адрес: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
       <div class="contacts-widget">
         <h3>Nёrds Design Studio</h3>
         <p>
