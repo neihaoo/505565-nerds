@@ -24,9 +24,9 @@
       </nav>
       <section class="slider">
         <h2 class="visually-hidden">Наши преимущества</h2>
-        <input class="visually-hidden" type="radio" id="slide-1" name="toggle" checked>
-        <input class="visually-hidden" type="radio" id="slide-2" name="toggle">
-        <input class="visually-hidden" type="radio" id="slide-3" name="toggle">
+        <input class="visually-hidden slide-1" type="radio" id="slide-1" name="toggle" checked>
+        <input class="visually-hidden slide-2" type="radio" id="slide-2" name="toggle">
+        <input class="visually-hidden slide-3" type="radio" id="slide-3" name="toggle">
         <div class="slider-controls">
           <label for="slide-1">Преимущество 1</label>
           <label for="slide-2">Преимущество 2</label>
@@ -135,6 +135,7 @@
   <footer class="main-footer">
     <section class="contacts">
       <h2 class="visually-hidden">Наши контакты</h2>
+      <div class="contacts-map"></div>
       <div class="container">
         <div class="contacts-widget">
           <h3>Nёrds Design Studio</h3>
@@ -193,5 +194,7 @@
     </form>
    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
+  <script src="js/script.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsSwO95vU2cD1QXJixqHcH2RSK7hbFp_w&callback=initMap"></script>
 </body>
 </html>
