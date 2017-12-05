@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>Дизайн-студия Нёрдс: Главная</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
@@ -135,7 +135,6 @@
   <footer class="main-footer">
     <section class="contacts">
       <h2 class="visually-hidden">Наши контакты</h2>
-      <div class="contacts-map"></div>
       <div class="container">
         <div class="contacts-widget">
           <h3>Nёrds Design Studio</h3>
@@ -147,6 +146,8 @@
           <a class="button widget-button"  href="writeus.html">Напишите нам</a>
         </div>
       </div>
+      <img class="visually-hidden" src="img/map.jpg" width="1440" height="416" alt="Адрес студии: 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+      <div class="contacts-map"></div>
     </section>
     <div class="container footer-bottom">
       <ul class="social">
@@ -184,7 +185,7 @@
       </p>
       <p class="contacts-form-item">
         <label for="email">Ваш e-mail:</label>
-        <input id="email" type="text" name="email" placeholder="Для отправки ответа">
+        <input id="email" type="email" name="email" placeholder="Для отправки ответа">
       </p>
       <p class="contacts-form-item">
         <label for="text">Текст письма:</label>
@@ -194,7 +195,7 @@
     </form>
    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsSwO95vU2cD1QXJixqHcH2RSK7hbFp_w&callback=initMap"></script>
 </body>
 </html>

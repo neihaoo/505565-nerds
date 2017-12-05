@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>Дизайн-студия Нёрдс: Магазин</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body class="inner-page">
   <header class="main-header">
@@ -96,16 +96,19 @@
             <li><a href="#">По типу</a></li>
             <li><a href="#">По названию</a></li>
           </ul>
-          <a class="catalog-filter-asc catalog-filter-current" href="#"><span class="visually-hidden">По убыванию</span></a>
-          <a class="catalog-filter-desc" href="#"><span class="visually-hidden">По возрастанию</span></a>
+          <a class="catalog-filter-arrow catalog-filter-down catalog-filter-current" href="#"><span class="visually-hidden">По убыванию</span></a>
+          <a class="catalog-filter-arrow catalog-filter-up" href="#"><span class="visually-hidden">По возрастанию</span></a>
         </div>
       </div>
       <ul class="catalog-list">
         <li class="catalog-item">
           <img src="img/img-sedona.jpg" width="360" height="576" alt="Фото портала Sedona">
           <section class="catalog-item-price">
-            <a class="item-title" href="#"><h3>Sedona</h3></a>
-            <p>Информационный сайт<br>для туристов</p>
+            <h3><a class="item-title" href="#">Sedona</a></h3>
+            <p>
+              Информационный сайт<br>
+              для туристов
+            </p>
             <a class="button catalog-item-button" href="#">9 900 РУБ.</a>
           </section>
         </li>
@@ -121,7 +124,10 @@
           <img src="img/img-barbershop.jpg" width="360" height="576" alt="Фото барбершопа «Бородинский»">
           <section class="catalog-item-price">
             <h3><a class="item-title" href="#">Barbershop</a></h3>
-            <p>Сайт салоны красоты.<br>Для мужчин, да.</p>
+            <p>
+              Сайт салоны красоты.<br>
+              Для мужчин, да.
+            </p>
             <a class="button catalog-item-button" href="#">9 900 РУБ.</a>
           </section>
         </li>
@@ -129,7 +135,10 @@
           <img src="img/img-mishka.jpg" width="360" height="576" alt="Фото интернет-магазина Mishka">
           <section class="catalog-item-price">
             <h3><a class="item-title" href="#">Mishka</a></h3>
-            <p>Интернет-магазин<br>вязаных игрушек</p>
+            <p>
+              Интернет-магазин<br>
+              вязаных игрушек
+            </p>
             <a href="#" class="button catalog-item-button">9 900 РУБ.</a>
           </section>
         </li>
@@ -161,7 +170,6 @@
   <footer class="main-footer">
     <section class="contacts">
       <h2 class="visually-hidden">Наши контакты</h2>
-      <div class="contacts-map"></div>
       <div class="container">
         <div class="contacts-widget">
           <h3>Nёrds Design Studio</h3>
@@ -173,6 +181,8 @@
           <a class="button widget-button" href="writeus.html">Напишите нам</a>
         </div>
       </div>
+      <img class="visually-hidden" src="img/map.jpg" width="1440" height="416" alt="Адрес студии: 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+      <div class="contacts-map"></div>
     </section>
     <div class="container footer-bottom">
       <ul class="social">
@@ -210,7 +220,7 @@
       </p>
       <p class="contacts-form-item">
         <label for="email">Ваш e-mail:</label>
-        <input id="email" type="text" name="email" placeholder="Для отправки ответа">
+        <input id="email" type="email" name="email" placeholder="Для отправки ответа">
       </p>
       <p class="contacts-form-item">
         <label for="text">Текст письма:</label>
@@ -220,7 +230,7 @@
     </form>
    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsSwO95vU2cD1QXJixqHcH2RSK7hbFp_w&callback=initMap"></script>
 </body>
 </html>
