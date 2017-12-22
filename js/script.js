@@ -9,7 +9,6 @@ var writeUsNameStorage = localStorage.getItem("name");
 var writeUsEmailStorage = localStorage.getItem("email");
 var catalogItemTitles = document.querySelectorAll(".item-title");
 var catalogItemPrice = document.querySelectorAll(".catalog-item-button");
-var catalogMouseHover = document.querySelectorAll(".catalog-item");
 
 writeUsButton.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -56,29 +55,26 @@ window.addEventListener("keydown", function (evt) {
 
 for ( i = 0; i < catalogItemTitles.length; i++ ) {
   catalogItemTitles[i].onfocus = function() {
+    this.parentNode.parentNode.parentNode.style.borderTopColor = "#4d4d4d";
+    this.parentNode.parentNode.parentNode.style.boxShadow = "0 6px 15px #bfbfbf";
     this.parentNode.parentNode.style.zIndex = "0";
   }
   catalogItemTitles[i].onblur = function() {
-    this.parentNode.parentNode.style.zIndex = "-1";
+    this.parentNode.parentNode.parentNode.removeAttribute("style");
+    this.parentNode.parentNode.removeAttribute("style");
   }
 }
 
 for ( i = 0; i < catalogItemPrice.length; i++ ) {
   catalogItemPrice[i].onfocus = function() {
+    this.parentNode.parentNode.style.borderTopColor = "#4d4d4d";
+    this.parentNode.parentNode.style.boxShadow = "0 6px 15px #bfbfbf";
     this.parentNode.style.zIndex = "0";
   }
   catalogItemPrice[i].onblur = function() {
-    this.parentNode.style.zIndex = "-1";
+    this.parentNode.parentNode.removeAttribute("style");
+    this.parentNode.removeAttribute("style");
   }
-}
-
-for ( i = 0; i < catalogMouseHover.length; i++ ) {
-  catalogMouseHover[i].addEventListener("mouseover", function() {
-    this.lastElementChild.style.zIndex = "0";
-  });
-  catalogMouseHover[i].addEventListener("mouseout", function() {
-    this.lastElementChild.style.zIndex = "-1";
-  });
 }
 
 function initMap() {
